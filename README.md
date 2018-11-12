@@ -8,6 +8,6 @@ There are 2 functions
   - One click on an added result will underline it,
   - Ability to delete the result when you double-click
 
-**`npm install`**
-**`npm start`**
+- **`npm install`**
+- **`npm start`**
 
