@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App{
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+}
+.CounterWrapper, .TodosWrapper{
+  flex: 1;
+  width: 50%;
+}
