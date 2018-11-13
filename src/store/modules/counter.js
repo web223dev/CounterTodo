@@ -1,29 +1,19 @@
-export const INCREMENT = 'counter/INCREMENT';
-export const DECREMENT = 'counter/DECREMENT';
+  import { createAction, handleActions } from 'redux-actions';
 
-export const increment = () => ({
-  type: INCREMENT
-})
+  const INCREMENT = 'counter/INCREMENT';
+  const DECREMENT = 'counter/DECREMENT';
 
-export const decrement = () => ({
-  type: DECREMENT
-})
+  export const increment = createAction(INCREMENT);
+  export const decrement = createAction(DECREMENT);
 
-const initialState = {
-  number: 0
-}
 
-export default function Counter(state = initialState, action){
-  switch(action.type){
-    case INCREMENT:
-      return {
-        number: state.number + 1
-      }
-    case DECREMENT:
-      return {
-        number: state.number - 1
-      }
-    default: 
-      return state;
+  const initialState = {
+    number: 0
   }
-}
+
+  export default handleActions({
+    [INCREMENT]: (state, action) => {
+      return { number: state.number + 1}
+    },
+    [DECREMENT]: ({number}) => ({ number: number - 1})
+  }, initialState);
