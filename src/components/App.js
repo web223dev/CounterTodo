@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CounterContainer from 'containers/CounterContainer';
-import Todos from 'components/Todos';
+import TodosContainer from 'containers/TodosContainer';
+
 import AppTemplate from './AppTemplate';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <AppTemplate 
         Counter={<CounterContainer />}
-        Todos={<Todos />}
+        Todos={<TodosContainer />}
       />      
     );
   }
